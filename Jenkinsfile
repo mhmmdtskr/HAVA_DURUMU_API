@@ -21,7 +21,7 @@ pipeline{
                 steps {
                     echo "build image adımındayım"
                     script {
-                        img = registry + ":${env.BUILD_ID}"
+                        img = registry + ":v1"
                         println ("${img}")
                         dockerImage = docker.build ("${img}")
                     }
